@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up | Inventory Management{% endblock %}
+
+{% block content %}
+<style>
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #000000;
+    --accent-color: #000000;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --text-muted: #666666;
+    --border-color: #e0e0e0;
+    --hover-bg: #fafafa;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background: var(--primary-bg);
+    animation: fadeIn 1s ease-out;
+}
+
+.signup-card {
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.signup-card h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.signup-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.signup-card label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.signup-card input[type="text"],
+.signup-card input[type="email"],
+.signup-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 1px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: var(--primary-bg);
+    transition: all 0.3s ease;
+}
+
+.signup-card input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    background: var(--hover-bg);
+}
+
+.signup-card button {
+    background: var(--accent-color);
+    color: var(--text-light);
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    border-radius: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-card button:hover {
+    background: var(--primary-bg);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.signup-card .helptext,
+.signup-card ul {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: -10px;
+}
+
+.signup-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.signup-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .signup-card {
+        padding: 40px 25px;
+    }
+
+    .signup-card h2 {
+        font-size: 1.6rem;
+    }
+}
+</style>
+
+<div class="signup-container">
+    <div class="signup-card">
+        <h2>Sign Up</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="signup-footer">
+            <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

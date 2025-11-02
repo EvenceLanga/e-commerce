@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}Inventory Form{% endblock %}
+
+{% block content %}
+<style>
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #000000;
+    --accent-color: #000000;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --text-muted: #666666;
+    --border-color: #e0e0e0;
+    --hover-bg: #fafafa;
+}
+
+/* Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background: var(--primary-bg);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Card */
+.form-card {
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 600px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Title */
+.form-card h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+/* Django Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 1px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: var(--primary-bg);
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    background: var(--hover-bg);
+}
+
+/* Save Button */
+form button[type="submit"] {
+    background: var(--accent-color);
+    color: var(--text-light);
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    border-radius: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background: var(--primary-bg);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+/* Help text and errors */
+form .helptext,
+form ul {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: -10px;
+}
+
+.errorlist {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: -5px;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 40px 25px;
+    }
+
+    .form-card h2 {
+        font-size: 1.6rem;
+    }
+}
+</style>
+
+<div class="form-container">
+    <div class="form-card">
+        <h2>{% if form.instance.pk %}Edit Item{% else %}Add Inventory Item{% endif %}</h2>
+        
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+
+        <a href="{% url 'inventory_list' %}" class="back-link">← Back to Inventory</a>
+    </div>
+</div>
+{% endblock %}

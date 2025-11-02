@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}Login | Inventory Management{% endblock %}
+
+{% block content %}
+<style>
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #000000;
+    --accent-color: #000000;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --text-muted: #666666;
+    --border-color: #e0e0e0;
+    --hover-bg: #fafafa;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: var(--primary-bg);
+    animation: fadeIn 1s ease-out;
+}
+
+.login-card {
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.login-card h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.login-card label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 1px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: var(--primary-bg);
+    transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    background: var(--hover-bg);
+}
+
+.login-card button {
+    background: var(--accent-color);
+    color: var(--text-light);
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    border-radius: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-card button:hover {
+    background: var(--primary-bg);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.login-card .helptext,
+.login-card ul {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: -10px;
+}
+
+.login-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.login-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 40px 25px;
+    }
+
+    .login-card h2 {
+        font-size: 1.6rem;
+    }
+}
+</style>
+
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="login-footer">
+            <p>Don’t have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
