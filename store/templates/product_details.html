@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Product Details</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="{% url 'store-home' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'shop' %}">Shop</a></li>
+        <li class="breadcrumb-item active text-white">Product Details</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<!-- Product Details Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="border rounded">
+                    <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid rounded" alt="Siemens 3RT2026 Relay">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="fw-bold mb-3">Siemens 3RT2026 Control Relay</h4>
+                <p class="mb-3">Compact contactor relay ideal for motor control and automation systems</p>
+                <h5 class="fw-bold mb-3">R 650.00</h5>
+                <div class="d-flex mb-4">
+                    <i class="fa fa-star text-secondary"></i>
+                    <i class="fa fa-star text-secondary"></i>
+                    <i class="fa fa-star text-secondary"></i>
+                    <i class="fa fa-star text-secondary"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p class="mb-4">High-quality Siemens control relay designed for industrial applications with reliable performance and long-lasting durability.</p>
+                
+                <div class="input-group quantity mb-5" style="width: 150px;">
+                    <div class="input-group-btn">
+                        <button class="btn btn-sm btn-minus rounded-circle bg-light border">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                    <input type="text" class="form-control form-control-sm text-center border-0" value="1">
+                    <div class="input-group-btn">
+                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <button class="btn border border-secondary rounded-pill px-4 py-2 text-primary add-to-cart" 
+                        data-product="Siemens 3RT2026 Control Relay" 
+                        data-price="650.00">
+                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                </button>
+            </div>
+            
+            <div class="col-lg-12">
+                <div class="bg-light rounded p-4 mt-5">
+                    <nav>
+                        <div class="nav nav-tabs mb-3">
+                            <button class="nav-link active border-white border-bottom-0" type="button" role="tab" 
+                                    id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" 
+                                    aria-controls="nav-description" aria-selected="true">Description</button>
+                            <button class="nav-link border-white border-bottom-0" type="button" role="tab" 
+                                    id="nav-specs-tab" data-bs-toggle="tab" data-bs-target="#nav-specs" 
+                                    aria-controls="nav-specs" aria-selected="false">Specifications</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content mb-5">
+                        <div class="tab-pane active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                            <p>The Siemens 3RT2026 control relay is a compact and versatile component designed for industrial control systems. Ideal for motor control applications, automation processes, and general-purpose switching.</p>
+                            <p class="mb-0">This relay offers reliable performance with easy installation and maintenance-free operation. Built to withstand harsh industrial environments with high electrical durability.</p>
+                        </div>
+                        <div class="tab-pane" id="nav-specs" role="tabpanel" aria-labelledby="nav-specs-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Brand:</strong> Siemens</li>
+                                        <li><strong>Model:</strong> 3RT2026</li>
+                                        <li><strong>Rated Current:</strong> 6A</li>
+                                        <li><strong>Rated Voltage:</strong> 240V AC</li>
+                                        <li><strong>Contact Configuration:</strong> 4NO</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mounting:</strong> DIN Rail</li>
+                                        <li><strong>Operating Temperature:</strong> -25°C to +55°C</li>
+                                        <li><strong>Protection Class:</strong> IP20</li>
+                                        <li><strong>Weight:</strong> 0.15 kg</li>
+                                        <li><strong>Warranty:</strong> 2 Years</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="row g-4 mt-2">
+            <div class="col-12">
+                <h3 class="mb-4">Related Products</h3>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rounded position-relative fruite-item">
+                    <div class="fruite-img">
+                        <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="Omron Relay">
+                    </div>
+                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Control Relays</div>
+                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                        <h4>Omron MY4N-GS Relay</h4>
+                        <p>General-purpose relay for control systems and signal switching.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                            <p class="text-dark fs-5 fw-bold mb-0">R 285.00</p>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" 
+                                    data-product="Omron MY4N-GS Relay" 
+                                    data-price="285.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rounded position-relative fruite-item">
+                    <div class="fruite-img">
+                        <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="ABB MCCB">
+                    </div>
+                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Switchgear</div>
+                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                        <h4>ABB MCCB 100A 3-Pole</h4>
+                        <p>Molded Case Circuit Breaker for power protection and distribution.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                            <p class="text-dark fs-5 fw-bold mb-0">R 3,500.00</p>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" 
+                                    data-product="ABB MCCB 100A 3-Pole" 
+                                    data-price="3500.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rounded position-relative fruite-item">
+                    <div class="fruite-img">
+                        <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid w-100 rounded-top" alt="Omron Relay">
+                    </div>
+                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Control Relays</div>
+                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                        <h4>Omron MY4N-GS Relay</h4>
+                        <p>General-purpose relay for control systems and signal switching.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                            <p class="text-dark fs-5 fw-bold mb-0">R 285.00</p>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" 
+                                    data-product="Omron MY4N-GS Relay" 
+                                    data-price="285.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rounded position-relative fruite-item">
+                    <div class="fruite-img">
+                        <img src="{% static 'store/img-1/aux_relay4.webp' %}" class="img-fluid w-100 rounded-top" alt="ABB MCCB">
+                    </div>
+                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Switchgear</div>
+                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                        <h4>ABB MCCB 100A 3-Pole</h4>
+                        <p>Molded Case Circuit Breaker for power protection and distribution.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                            <p class="text-dark fs-5 fw-bold mb-0">R 3,500.00</p>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" 
+                                    data-product="ABB MCCB 100A 3-Pole" 
+                                    data-price="3500.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rounded position-relative fruite-item">
+                    <div class="fruite-img">
+                        <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid w-100 rounded-top" alt="Power Supply">
+                    </div>
+                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Power Supply</div>
+                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                        <h4>Mean Well LRS-350-24</h4>
+                        <p>Reliable 24V DC industrial power supply with short-circuit protection.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                            <p class="text-dark fs-5 fw-bold mb-0">R 990.00</p>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" 
+                                    data-product="Mean Well LRS-350-24" 
+                                    data-price="990.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product Details End -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Quantity controls
+    const btnMinus = document.querySelector('.btn-minus');
+    const btnPlus = document.querySelector('.btn-plus');
+    const quantityInput = document.querySelector('input[type="text"]');
+    
+    btnMinus.addEventListener('click', function() {
+        let value = parseInt(quantityInput.value);
+        if (value > 1) {
+            quantityInput.value = value - 1;
+        }
+    });
+    
+    btnPlus.addEventListener('click', function() {
+        let value = parseInt(quantityInput.value);
+        quantityInput.value = value + 1;
+    });
+});
+</script>
+
+{% endblock %}

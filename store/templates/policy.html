@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Privacy Policy</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="{% url 'store-home' %}">Home</a></li>
+        <li class="breadcrumb-item active text-white">Privacy Policy</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<!-- Privacy Policy Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-12">
+                <div class="bg-light rounded p-5">
+                    <h2 class="mb-4">Privacy Policy</h2>
+                    <p class="mb-4">Last updated: January 2024</p>
+                    
+                    <h4 class="mb-3">1. Information We Collect</h4>
+                    <p class="mb-4">We collect personal information that you provide to us when you place an order, create an account, or contact our support team. This includes your name, email address, phone number, shipping address, and payment information.</p>
+                    
+                    <h4 class="mb-3">2. How We Use Your Information</h4>
+                    <p class="mb-4">We use your personal information to process your orders, provide customer support, send order confirmations and updates, and improve our services. We may also use your information for marketing purposes with your consent.</p>
+                    
+                    <h4 class="mb-3">3. Data Security</h4>
+                    <p class="mb-4">We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Your payment information is encrypted and processed securely.</p>
+                    
+                    <h4 class="mb-3">4. Third-Party Services</h4>
+                    <p class="mb-4">We may use third-party services for payment processing, shipping, and analytics. These services have their own privacy policies, and we recommend you review them.</p>
+                    
+                    <h4 class="mb-3">5. Your Rights</h4>
+                    <p class="mb-4">You have the right to access, correct, or delete your personal information. You can also object to the processing of your data or request data portability.</p>
+                    
+                    <h4 class="mb-3">6. Contact Us</h4>
+                    <p class="mb-0">If you have any questions about this Privacy Policy, please contact us at privacy@tjsystems.co.za</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Privacy Policy End -->
+
+{% endblock %}

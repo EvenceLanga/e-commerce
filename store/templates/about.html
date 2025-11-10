@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">About Us</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="{% url 'store-home' %}">Home</a></li>
+        <li class="breadcrumb-item active text-white">About Us</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid w-100 rounded" alt="About TJ Systems">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-4">Why Choose Our Industrial Components</h1>
+                <p class="mb-4">TJ Systems is a leading supplier of high-quality industrial electrical components, switchgear, and control systems. With years of experience in the industry, we provide reliable solutions for automation, power distribution, and control applications.</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="about-item">
+                            <h5><i class="fa fa-check text-primary me-2"></i>Quality Products</h5>
+                            <p>Genuine components from trusted brands</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-item">
+                            <h5><i class="fa fa-check text-primary me-2"></i>Expert Support</h5>
+                            <p>Technical assistance and guidance</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-item">
+                            <h5><i class="fa fa-check text-primary me-2"></i>Fast Delivery</h5>
+                            <p>Quick shipping across South Africa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-item">
+                            <h5><i class="fa fa-check text-primary me-2"></i>Competitive Pricing</h5>
+                            <p>Best prices for industrial components</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+{% endblock %}

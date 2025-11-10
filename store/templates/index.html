@@ -1,0 +1,777 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Start -->
+<div class="container-fluid py-5 mb-5 hero-header">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-12 col-lg-7">
+                <h4 class="mb-3 text-secondary">100% Security Payment</h4>
+                <h1 class="mb-5 display-3 text-primary">Switchgear Components & Control Relays</h1>
+                <div class="position-relative mx-auto">
+                    <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" 
+                           type="search" placeholder="Search">
+                    <button type="submit" 
+                            class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" 
+                            style="top: 0; right: 25%;">Submit Now</button>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-5">
+                <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active rounded">
+                            <img src="{% static 'store/img-1/aux_relay1.webp' %}" 
+                                 class="img-fluid w-100 h-100 bg-secondary rounded" 
+                                 alt="First slide">
+                            <a href="#" class="btn px-4 py-2 text-white rounded">Aux Relay</a>
+                        </div>
+                        <div class="carousel-item rounded">
+                            <img src="{% static 'store/img-1/aux_relay2.webp' %}" 
+                                 class="img-fluid w-100 h-100 rounded" 
+                                 alt="Second slide">
+                            <a href="#" class="btn px-4 py-2 text-white rounded">Contactor</a>
+                        </div>
+                        <!-- Add more slides if needed -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+<!-- Featurs Section Start -->
+        <div class="container-fluid featurs py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Free Shipping</h5>
+                                <p class="mb-0">Free on order over R300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-user-shield fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Security Payment</h5>
+                                <p class="mb-0">100% security payment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>30 Day Return</h5>
+                                <p class="mb-0">30 day money guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fa fa-phone-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>24/7 Support</h5>
+                                <p class="mb-0">Support every time fast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featurs Section End -->
+
+<!-- Shop Start -->
+<div class="container-fluid products-section py-5">
+    <div class="container py-5">
+        <div class="tab-class text-center">
+            <div class="row g-4">
+                <div class="col-lg-4 text-start">
+                    <h1>Our Industrial Products</h1>
+                </div>
+                <div class="col-lg-8 text-end">
+                    <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-all">
+                                <span class="text-dark" style="width: 130px;">All Products</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-relays">
+                                <span class="text-dark" style="width: 130px;">Control Relays</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-switchgear">
+                                <span class="text-dark" style="width: 130px;">Switchgear Components</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-automation">
+                                <span class="text-dark" style="width: 130px;">Automation & Control</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-power">
+                                <span class="text-dark" style="width: 130px;">Power Supplies & Transformers</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-cables">
+                                <span class="text-dark" style="width: 130px;">Cables & Accessories</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content">
+
+                <!-- All Products -->
+                <div id="tab-all" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+
+                        <!-- Control Relays -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="Control Relay">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Control Relays</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Siemens Control Relay 3RT2026</h4>
+                                    <p>Compact contactor relay ideal for motor control and automation systems.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 650.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="Relay">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Control Relays</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Omron MY4N-GS Relay</h4>
+                                    <p>General-purpose relay for control systems and signal switching.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 285.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Switchgear -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="Switchgear">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Switchgear</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>ABB Switchgear Module</h4>
+                                    <p>Durable and high-performance switchgear for power distribution systems.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 2,200.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid w-100 rounded-top" alt="MCCB">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Switchgear</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>ABB MCCB 3-Pole 100A</h4>
+                                    <p>Molded Case Circuit Breaker for power protection and distribution.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 3,500.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Automation -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="PLC Controller">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Automation</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Allen-Bradley MicroLogix PLC</h4>
+                                    <p>Programmable Logic Controller for industrial automation processes.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 8,400.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="HMI">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Automation</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Delta HMI DOP-107CV</h4>
+                                    <p>7-inch touchscreen interface for PLC control and monitoring.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 6,800.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Power -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="Power Supply">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Power Supply</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Mean Well LRS-350-24</h4>
+                                    <p>Reliable 24V DC industrial power supply with short-circuit protection.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 990.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cables -->
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="Cable">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Cables</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Shielded Control Cable 4-Core 1.5mm</h4>
+                                    <p>Flexible industrial-grade control cable with copper conductors.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 45.00/m</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="rounded position-relative product-item">
+                                <div class="product-img">
+                                    <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid w-100 rounded-top" alt="Cable Accessories">
+                                </div>
+                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top:10px; left:10px;">Accessories</div>
+                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                    <h4>Cable Gland M20 Brass</h4>
+                                    <p>Durable brass cable gland suitable for industrial enclosures.</p>
+                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                        <p class="text-dark fs-5 fw-bold mb-0">R 75.00</p>
+                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- tab-content -->
+        </div>
+    </div>
+</div>
+<!-- Shop End -->
+
+
+       <!-- Features Start -->
+<div class="container-fluid service py-5">
+    <div class="container py-5">
+        <div class="row g-4 justify-content-center">
+
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item bg-secondary rounded border border-secondary">
+                        <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid rounded-top w-100" alt="Control Relay">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content bg-primary text-center p-4 rounded">
+                                <h5 class="text-white">High-Quality Control Relays</h5>
+                                <h3 class="mb-0">Up to 15% Off</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item bg-dark rounded border border-dark">
+                        <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid rounded-top w-100" alt="PLC Controller">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content bg-light text-center p-4 rounded">
+                                <h5 class="text-primary">PLC Systems</h5>
+                                <h3 class="mb-0">Free Support</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="#">
+                    <div class="service-item bg-primary rounded border border-primary">
+                        <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid rounded-top w-100" alt="Power Transformer">
+                        <div class="px-4 rounded-bottom">
+                            <div class="service-content bg-secondary text-center p-4 rounded">
+                                <h5 class="text-white">Power Supplies</h5>
+                                <h3 class="mb-0">Save Up to R500</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+        <!-- Industrial Products Carousel Start -->
+<div class="container-fluid vesitable py-5">
+    <div class="container py-5">
+        <h1 class="mb-0">Featured Industrial Products</h1>
+        <div class="owl-carousel vegetable-carousel justify-content-center">
+
+            <!-- Product 1 -->
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="Control Relay">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Control Relay</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>Siemens 3RT2026 Relay</h4>
+                    <p>Reliable industrial control relay designed for automation and motor circuits.</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">R 650.00</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="PLC Controller">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Automation</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>Allen-Bradley MicroLogix PLC</h4>
+                    <p>Programmable logic controller for precise industrial automation control.</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">R 8,400.00</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top bg-light" alt="HMI Panel">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Automation</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>Delta DOP-107CV HMI</h4>
+                    <p>7-inch human-machine interface panel for real-time control monitoring.</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">R 6,800.00</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="MCCB Breaker">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Switchgear</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>ABB MCCB 100A 3-Pole</h4>
+                    <p>Heavy-duty molded case circuit breaker for electrical distribution systems.</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">R 3,500.00</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="Power Supply">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Power Supply</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>Mean Well LRS-350-24</h4>
+                    <p>High-efficiency 24V DC industrial power supply with overload protection.</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">R 990.00</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded-top" alt="Industrial Cable">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Cables</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>Shielded Control Cable 4-Core</h4>
+                    <p>Flexible multi-core copper control cable for automation and panels.</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">R 45.00 / m</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Industrial Products Carousel End -->
+
+
+        <!-- Banner Section Start -->
+<div class="container-fluid banner bg-secondary my-5">
+    <div class="container py-5">
+        <div class="row g-4 align-items-center">
+            <!-- Left Text Section -->
+            <div class="col-lg-6">
+                <div class="py-4">
+                    <h1 class="display-3 text-white">Premium Industrial Components</h1>
+                    <p class="fw-normal display-3 text-dark mb-4">for Automation & Control</p>
+                    <p class="mb-4 text-dark">
+                        Explore our top-quality electrical and automation products — engineered for safety, reliability, and performance in every industrial environment.
+                    </p>
+                    <a href="{% url 'shop' %}" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">
+                        SHOP NOW
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Section -->
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid w-100 rounded" alt="Industrial Products Banner">
+                    <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" 
+                         style="width: 140px; height: 140px; top: 0; left: 0;">
+                        <h1 style="font-size: 100px;">1</h1>
+                        <div class="d-flex flex-column">
+                            <span class="h2 mb-0">R 450</span>
+                            <span class="h4 text-muted mb-0">each</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Section End -->
+
+
+
+<!-- Bestseller Products Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+            <h1 class="display-4">Bestseller Products</h1>
+            <p>Top-quality industrial components and electrical products, carefully selected for performance and reliability.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Product Item 1 -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid rounded-circle w-100" alt="Industrial Switch">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">Industrial Switch</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">R 450</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid rounded-circle w-100" alt="Relay Module">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">Relay Module</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">R 320</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid rounded-circle w-100" alt="Electric Drill">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">Electric Drill</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">R 1,150</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid rounded-circle w-100" alt="Circuit Breaker">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">Circuit Breaker</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">R 890</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 5 -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid rounded-circle w-100" alt="Copper Wire">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">Copper Wire Roll</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">R 600</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 6 -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid rounded-circle w-100" alt="LED Bulb">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">LED Bulb Pack</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">R 220</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- Bestseller Products End -->
+
+
+
+        <!-- Fact Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="bg-light p-5 rounded">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users text-secondary"></i>
+                                <h4>satisfied customers</h4>
+                                <h1>1963</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users text-secondary"></i>
+                                <h4>quality of service</h4>
+                                <h1>99%</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users text-secondary"></i>
+                                <h4>quality certificates</h4>
+                                <h1>33</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users text-secondary"></i>
+                                <h4>Available Products</h4>
+                                <h1>789</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fact Start -->
+
+<!-- Custom CSS -->
+<style>
+    /* Active tab styling */
+    .nav-pills .nav-link.active {
+        background-color: var(--bs-secondary) !important;
+        color: #fff !important;
+    }
+    .nav-pills .nav-link.active span {
+        color: #fff !important;
+    }
+    .nav-pills .nav-link:hover {
+        background-color: var(--bs-secondary) !important;
+        color: #fff !important;
+    }
+</style>
+
+{% endblock %}

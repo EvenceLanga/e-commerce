@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Return Policy</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="{% url 'store-home' %}">Home</a></li>
+        <li class="breadcrumb-item active text-white">Return Policy</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<!-- Return Policy Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-12">
+                <div class="bg-light rounded p-5">
+                    <h2 class="mb-4">Return Policy</h2>
+                    <p class="mb-4">We want you to be completely satisfied with your purchase. Please read our return policy carefully.</p>
+                    
+                    <h4 class="mb-3">1. Return Period</h4>
+                    <p class="mb-4">You may return most items within 30 days of delivery for a full refund or exchange. The item must be in its original condition, unused, and in the original packaging.</p>
+                    
+                    <h4 class="mb-3">2. Non-Returnable Items</h4>
+                    <p class="mb-4">The following items cannot be returned:</p>
+                    <ul class="mb-4">
+                        <li>Opened or used electrical components</li>
+                        <li>Custom or special order items</li>
+                        <li>Software and digital products</li>
+                        <li>Items damaged due to misuse or improper installation</li>
+                    </ul>
+                    
+                    <h4 class="mb-3">3. Return Process</h4>
+                    <p class="mb-4">To initiate a return, please contact our customer service team at returns@tjsystems.co.za with your order number and reason for return. We will provide you with a return authorization and instructions.</p>
+                    
+                    <h4 class="mb-3">4. Refunds</h4>
+                    <p class="mb-4">Once we receive and inspect your return, we will process your refund within 5-7 business days. The refund will be issued to your original payment method. Shipping costs are non-refundable.</p>
+                    
+                    <h4 class="mb-3">5. Exchanges</h4>
+                    <p class="mb-4">If you need to exchange an item for a different product, please contact us. You will be responsible for any price difference and additional shipping costs.</p>
+                    
+                    <h4 class="mb-3">6. Damaged or Defective Items</h4>
+                    <p class="mb-0">If you receive a damaged or defective item, please contact us within 7 days of delivery. We will arrange for a replacement or refund at no additional cost to you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Return Policy End -->
+
+{% endblock %}

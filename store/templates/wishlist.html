@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Wishlist</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="{% url 'store-home' %}">Home</a></li>
+        <li class="breadcrumb-item active text-white">Wishlist</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<!-- Wishlist Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Products</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Siemens Relay">
+                            </div>
+                        </th>
+                        <td>
+                            <p class="mb-0 mt-4">Siemens 3RT2026 Relay</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4">R 650.00</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4 text-success">In Stock</p>
+                        </td>
+                        <td>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary mt-4 add-to-cart" 
+                                    data-product="Siemens 3RT2026 Relay" 
+                                    data-price="650.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-md rounded-circle bg-light border mt-4">
+                                <i class="fa fa-times text-danger"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'store/img-1/aux_relay2.webp' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="ABB MCCB">
+                            </div>
+                        </th>
+                        <td>
+                            <p class="mb-0 mt-4">ABB MCCB 100A 3-Pole</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4">R 3,500.00</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4 text-success">In Stock</p>
+                        </td>
+                        <td>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary mt-4 add-to-cart" 
+                                    data-product="ABB MCCB 100A 3-Pole" 
+                                    data-price="3500.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-md rounded-circle bg-light border mt-4">
+                                <i class="fa fa-times text-danger"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'store/img-1/aux_relay3.webp' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Power Supply">
+                            </div>
+                        </th>
+                        <td>
+                            <p class="mb-0 mt-4">Mean Well LRS-350-24</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4">R 990.00</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4 text-warning">Low Stock</p>
+                        </td>
+                        <td>
+                            <button class="btn border border-secondary rounded-pill px-3 text-primary mt-4 add-to-cart" 
+                                    data-product="Mean Well LRS-350-24" 
+                                    data-price="990.00">
+                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to Cart
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-md rounded-circle bg-light border mt-4">
+                                <i class="fa fa-times text-danger"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'store/img-1/aux_relay1.webp' %}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Allen-Bradley PLC">
+                            </div>
+                        </th>
+                        <td>
+                            <p class="mb-0 mt-4">Allen-Bradley MicroLogix PLC</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4">R 8,400.00</p>
+                        </td>
+                        <td>
+                            <p class="mb-0 mt-4 text-danger">Out of Stock</p>
+                        </td>
+                        <td>
+                            <button class="btn border border-secondary rounded-pill px-3 text-muted mt-4" disabled>
+                                <i class="fa fa-shopping-bag me-2"></i> Out of Stock
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-md rounded-circle bg-light border mt-4">
+                                <i class="fa fa-times text-danger"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="{% url 'shop' %}" class="btn btn-primary rounded-pill px-4 py-3">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Wishlist End -->
+
+{% endblock %}
