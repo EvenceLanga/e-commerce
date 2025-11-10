@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9w+#hdh+)&g258dvqk=!#h(_o!me&+bexwdt6+*_7z6l%&z_(-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['inventory-management-hsed.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-1a9f.up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
